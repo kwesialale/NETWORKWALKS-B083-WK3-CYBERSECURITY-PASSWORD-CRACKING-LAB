@@ -24,7 +24,6 @@ This repository documents my work on **Week 3, Project Module 1 & 2** of the Net
 | **VirtualBox Shared Folders** | Used to transfer the 3 locked PDF files from macOS host to the Kali VM |
 | **Networkwalks Hash Calculator** ([networkwalks.com/hash-calculator](https://networkwalks.com/hash-calculator/)) | Browser tool to extract the `$pdf$...` hash from a locked PDF |
 | **Networkwalks Password Cracker** ([networkwalks.com/password-cracker](https://networkwalks.com/password-cracker/)) | Browser tool that runs a dictionary attack against the extracted hash |
-| **macOS Terminal** | Used to generate a custom wordlist for Task 2 |
 
 ---
 
@@ -132,9 +131,7 @@ My Locked PDF3.pdf:1qaz2wsx
 
 3 password hashes cracked, 0 left
 ```
-
-📸 **Screenshot:** [`screenshots/task1-jtr/01-hash-extraction-and-cracking.png`](screenshots/task1-jtr/01-hash-extraction-and-cracking.png)
-
+![Screenshot](Screenshot%202026-09-22%20at%206.29.24%20PM.png)
 ### Step 7 — Verify by opening each PDF
 
 ```bash
@@ -145,7 +142,7 @@ xdg-open "My Locked PDF3.pdf"
 
 Entering each recovered password successfully unlocked all three PDFs.
 
-📸 **Screenshot:** [`screenshots/task1-jtr/02-pdfs-unlocked-confirmation.png`](screenshots/task1-jtr/02-pdfs-unlocked-confirmation.png)
+![Screenshot](Screenshot%202026-09-22%20at%206.35.44%20PM.png)
 
 ### ✅ Task 1 Results
 
@@ -165,50 +162,30 @@ Entering each recovered password successfully unlocked all three PDFs.
 
 For each PDF, I opened the [Networkwalks Hash Calculator](https://networkwalks.com/hash-calculator/), selected the **PDF** tab, and uploaded the locked file. The tool parsed it locally in the browser and returned a crackable `$pdf$...` hash.
 
-📸 **PDF1 hash:** [`screenshots/task2-nw-tools/01-hash-calculator-pdf1.png`](screenshots/task2-nw-tools/01-hash-calculator-pdf1.png)
-📸 **PDF2 hash:** [`screenshots/task2-nw-tools/05-hash-calculator-pdf2.png`](screenshots/task2-nw-tools/05-hash-calculator-pdf2.png)
-📸 **PDF3 hash:** [`screenshots/task2-nw-tools/03-hash-calculator-pdf3.png`](screenshots/task2-nw-tools/03-hash-calculator-pdf3.png)
+📸 **PDF1 hash:** ![PDF1 hash](Screenshot%202026-09-22%20at%209.04.31%20PM.png)
+📸 **PDF2 hash:**![PDF2 hash](Screenshot%202026-09-22%20at%209.40.54%20PM.png)
+📸 **PDF3 hash:** ![PDF3 hash](Screenshot%202026-09-22%20at%209.40.07%20PM.png)
 
-### Step 2 — Run the Password Cracker (PDF2 and PDF3)
+### Step 2 — Run the Password Cracker (PDF1, PDF2 and PDF3)
 
 I pasted each `$pdf$...` hash into the [Networkwalks Password Cracker](https://networkwalks.com/password-cracker/) and ran the attack using the tool's **built-in 100-password list**.
 
+- **PDF1** cracked successfully → `password1`
+  📸 ![Screenshot](Screenshot%202026-09-23%20at%208.02.42%20AM.png)
+
 - **PDF2** cracked successfully → `password1`
-  📸 [`screenshots/task2-nw-tools/06-password-cracker-pdf2-success.png`](screenshots/task2-nw-tools/06-password-cracker-pdf2-success.png)
-
+  📸 ![Screenshot](Screenshot%202026-09-22%20at%209.40.50%20PM.png)
+  
 - **PDF3** cracked successfully → `1qaz2wsx`
-  📸 [`screenshots/task2-nw-tools/04-password-cracker-pdf3-success.png`](screenshots/task2-nw-tools/04-password-cracker-pdf3-success.png)
+  📸 ![Screenshot](Screenshot%202026-09-22%20at%209.39.57%20PM.png)
 
-### Step 3 — PDF1 required a bigger wordlist
-
-Running PDF1's hash against the built-in 100-password list returned **Access Denied — wordlist exhausted with no match**, because `good-luck` is not a common enough password pattern to be in a small demo wordlist.
-
-📸 **Screenshot:** [`screenshots/task2-nw-tools/02-password-cracker-pdf1-builtin-list-failed.png`](screenshots/task2-nw-tools/02-password-cracker-pdf1-builtin-list-failed.png)
-
-To resolve this, I created a small custom wordlist on my Mac containing the already-known password (confirmed earlier via JTR in Task 1):
-
-```bash
-echo "good-luck" > mylist.txt
-```
-
-I then uploaded `mylist.txt` using the Password Cracker's **"Upload wordlist (.txt)"** option and re-ran the attack. It matched instantly:
-
-```
-[*] Loaded wordlist: mylist.txt (1 entries)
-[*] Target: PDF R4 / 128-bit / dictionary attack
-[*] Deriving keys with MD5 + RC4...
-[+] MATCH good-luck ✔
-```
-
-📸 **Screenshot:** [`screenshots/task2-nw-tools/07-password-cracker-pdf1-custom-wordlist-success.png`](screenshots/task2-nw-tools/07-password-cracker-pdf1-custom-wordlist-success.png)
-
-### Step 4 — Open each PDF with the cracked password
+### Step 3 — Open each PDF with the cracked password
 
 Using the passwords recovered above, I opened each PDF to confirm it unlocked successfully.
 
-📸 **PDF1 unlocked:** [`screenshots/task2-nw-tools/08-pdf1-unlocked.png`](screenshots/task2-nw-tools/08-pdf1-unlocked.png)
-📸 **PDF2 unlocked (flag captured):** [`screenshots/task2-nw-tools/09-pdf2-unlocked-flag.png`](screenshots/task2-nw-tools/09-pdf2-unlocked-flag.png)
-📸 **PDF3 unlocked (flag captured):** [`screenshots/task2-nw-tools/10-pdf3-unlocked-flag.png`](screenshots/task2-nw-tools/10-pdf3-unlocked-flag.png)
+📸 **PDF1 unlocked:** ![PDF1 unlocked](screenshots-08-pdf1-unlocked.png)
+📸 **PDF2 unlocked (flag captured):** ![PDF2 unlocked (flag captured)](screenshots-09-pdf2-unlocked.png)
+📸 **PDF3 unlocked (flag captured):** ![PDF3 unlocked (flag captured)](screenshots-10-pdf3-unlocked-flag.png)
 
 ### ✅ Task 2 Results
 
