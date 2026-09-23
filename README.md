@@ -170,7 +170,7 @@ For each PDF, I opened the [Networkwalks Hash Calculator](https://networkwalks.c
 
 I pasted each `$pdf$...` hash into the [Networkwalks Password Cracker](https://networkwalks.com/password-cracker/) and ran the attack using the tool's **built-in 100-password list**.
 
-- **PDF1** cracked successfully → `password1`
+- **PDF1** cracked successfully → `good-luck`
   📸 ![Screenshot](Screenshot%202026-09-23%20at%208.02.42%20AM.png)
 
 - **PDF2** cracked successfully → `password1`
