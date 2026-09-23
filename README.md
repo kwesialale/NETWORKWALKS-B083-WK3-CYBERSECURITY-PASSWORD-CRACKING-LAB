@@ -1,4 +1,4 @@
-# Password Cracking Lab — Week 3 (Networkwalks Cybersecurity & Ethical Hacking Program)
+# Password Cracking Lab 
 This repository documents my work on **Week 3, Project Module 1 & 2** of the Networkwalks Cybersecurity & Ethical Hacking training program. The lab focuses on password cracking against encrypted PDF files using two different methods: John the Ripper (JTR) on Kali Linux, and Networkwalks' own browser-based hash cracking tools.
 
 ---
@@ -229,10 +229,6 @@ The PDF files used in this project were intentionally created and provided by Ne
 
 ✅ The goal of this lab is to build a practical understanding of how password security works, why weak passwords are risky, and how cybersecurity professionals identify and address these vulnerabilities, not to encourage unauthorized access of any kind.
 🛡️ Please use the knowledge and tools demonstrated here responsibly and ethically.
-
----
-
-*Completed as part of the Networkwalks Cybersecurity & Ethical Hacking Project Tasks — Week 3.*
 
 ---
 
