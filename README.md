@@ -237,4 +237,4 @@ Alale Matthew
 
 Cybersecurity Intern 
 
-LinkedIn: 
+LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7508571715061334016/
