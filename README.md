@@ -1,5 +1,4 @@
 # Password Cracking Lab — Week 3 (Networkwalks Cybersecurity & Ethical Hacking Program)
-
 This repository documents my work on **Week 3, Project Module 1 & 2** of the Networkwalks Cybersecurity & Ethical Hacking training program. The lab focuses on password cracking against encrypted PDF files using two different methods: John the Ripper (JTR) on Kali Linux, and Networkwalks' own browser-based hash cracking tools.
 
 ---
@@ -38,15 +37,14 @@ password-cracking-lab/
     │   └── 02-pdfs-unlocked-confirmation.png
     └── task2-nw-tools/
         ├── 01-hash-calculator-pdf1.png
-        ├── 02-password-cracker-pdf1-builtin-list-failed.png
-        ├── 03-hash-calculator-pdf3.png
-        ├── 04-password-cracker-pdf3-success.png
-        ├── 05-hash-calculator-pdf2.png
-        ├── 06-password-cracker-pdf2-success.png
-        ├── 07-password-cracker-pdf1-custom-wordlist-success.png
-        ├── 08-pdf1-unlocked.png
-        ├── 09-pdf2-unlocked-flag.png
-        └── 10-pdf3-unlocked-flag.png
+        ├── 02-password-cracker-pdf1-success.png
+        ├── 03-hash-calculator-pdf2.png
+        ├── 04-password-cracker-pdf2-success.png
+        ├── 05-hash-calculator-pdf3.png
+        ├── 06-password-cracker-pdf3-success.png
+        ├── 07-pdf1-unlocked.png
+        ├── 08-pdf2-unlocked-flag.png
+        └── 09-pdf3-unlocked-flag.png
 ```
 
 ---
@@ -200,7 +198,7 @@ I pasted each `$pdf$...` hash into the [Networkwalks Password Cracker](https://n
 
 ---
 
-### Step 3 — Open each PDF with the cracked password
+### Step 3 - Open each PDF with the cracked password
 
 Using the passwords recovered above, I opened each PDF to confirm it unlocked successfully.
 
@@ -222,12 +220,15 @@ Using the passwords recovered above, I opened each PDF to confirm it unlocked su
 
 ---
 
-## 📚 References
+⚠️ Disclaimer
+🔒 This repository is for educational purposes only, completed as part of an approved lab exercise within the Networkwalks Cybersecurity & Ethical Hacking training program.
 
-- [John the Ripper – Openwall](https://www.openwall.com/john/)
-- [Networkwalks Hash Calculator](https://networkwalks.com/hash-calculator/)
-- [Networkwalks Password Cracker](https://networkwalks.com/password-cracker/)
-- [Networkwalks Academy](https://www.networkwalks.com)
+The PDF files used in this project were intentionally created and provided by Networkwalks for practice purposes. No real, private, or third-party data was accessed at any point.
+
+⚖️ Password cracking, hash extraction, and related techniques should only ever be performed on systems, files, or accounts you own, or have explicit written permission to test. Attempting to crack passwords or access data that does not belong to you, without authorization, is illegal and violates ethical hacking principles.
+
+✅ The goal of this lab is to build a practical understanding of how password security works, why weak passwords are risky, and how cybersecurity professionals identify and address these vulnerabilities, not to encourage unauthorized access of any kind.
+🛡️ Please use the knowledge and tools demonstrated here responsibly and ethically.
 
 ---
 
@@ -237,4 +238,7 @@ Using the passwords recovered above, I opened each PDF to confirm it unlocked su
 
 Author: 
 Alale Matthew
+
 Cybersecurity Intern 
+
+LinkedIn: 
